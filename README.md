@@ -1,3 +1,8 @@
+## You probably shouldn't use this! 
+I made this because I needed it ASAP and it is probably quite poor code quality and the tests do not cover the modifications. 
+This adds an IP Whitelist to allow certain users to connect directly to the proxy. I made only to let [Geyser](https://geysermc.org/) work while also using TCPShield.   
+I plan to fix it up and make it proper in the future, and possibly even PR it to main, but until then using this is **NOT RECOMMENDED**!
+
 # TCPShield
 TCPShield is the plugin for the same named DDoS mitigation service [TCPShield](https://tcpshield.com).
 
