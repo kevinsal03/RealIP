@@ -22,6 +22,7 @@ public class VelocityConfigImpl extends TCPShieldConfig {
         this.onlyProxy = toml.getBoolean("only-allow-proxy-connections");
         this.timestampValidationMode = toml.getString("timestamp-validation");
         this.debug = toml.getBoolean("debug-mode");
+        this.ipWhitelist = toml.getList("ip-whitelist");
     }
 
     private void saveDefaultConfig() {

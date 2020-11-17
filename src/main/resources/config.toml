@@ -6,3 +6,6 @@ timestamp-validation = 'htpdate'
 
 # Turn on to diagnose connection issues
 debug-mode = false
+
+# IP Whitelist
+ip-whitelist = ['127.0.0.1']

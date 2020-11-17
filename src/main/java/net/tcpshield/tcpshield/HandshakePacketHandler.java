@@ -80,7 +80,13 @@ public class HandshakePacketHandler {
         } catch (SigningVerificationFailureException e) {
             handleSigningVerificationFailure(player, rawPayload);
         } catch (ConnectionNotProxiedException e) {
-            handleNotProxiedConnection(player, rawPayload);
+            if (config.getIPWhitelist().contains(player.getIP())) {
+                if (config.isDebug()) {
+                    logger.info(String.format("%s[%s/%s] was not proxied, but was allowed to connect by the IP Whitelist. Raw payload = \"%s\"", player.getName(), player.getUUID(), player.getIP(), rawPayload));
+                }
+            } else {
+                handleNotProxiedConnection(player, rawPayload);
+            }
         } catch (IPModificationFailureException e) {
             this.logger.warning(String.format("%s[%s/%s]'s IP failed to be modified. Raw payload = \"%s\"", player.getName(), player.getUUID(), player.getIP(), rawPayload));
             e.printStackTrace();
