@@ -1,3 +1,8 @@
+## This is deprecated. Use the official implementation.
+Official Branch: https://github.com/TCPShield/RealIP/tree/ip-validation  
+Official Alpha build: https://cloud.paul-zhang.de/s/KoQaWjcTZZkjx4H  
+See [this](https://github.com/TCPShield/RealIP/issues/23#issuecomment-735402883) issue on the main repository for more information.
+
 ## You probably shouldn't use this! 
 I made this because I needed it ASAP and it is probably quite poor code quality and the tests do not cover the modifications. 
 This adds an IP Whitelist to allow certain users to connect directly to the proxy. I made only to let [Geyser](https://geysermc.org/) work while also using TCPShield.   
